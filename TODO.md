@@ -12,4 +12,4 @@
 
 # Not Necessary but nice additions
 - ability to name your character
--add an HP bar 
+- add an HP bar 

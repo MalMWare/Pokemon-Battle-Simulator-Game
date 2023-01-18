@@ -1,0 +1,25 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: url(./assets/images/pokemon-background-mainmenu.webp) center/cover no-repeat;
+}
+
+#startBtn {
+    position: fixed;
+    background: black;
+    color: white;
+    font-size: 30px;
+}
+
+#startBtn:hover {
+    background:  #3559B9;
+    color:#FFCC00; 
+}
+
+#bulba {
+    height: 100px;
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+
+}
