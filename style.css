@@ -19,7 +19,12 @@ body {
 #bulba {
     height: 100px;
     position: absolute;
-    right: 200px;
-    bottom: 200px;
-
+    right: 180px;
+    bottom: 350px;
 }
+
+/* #startGame {
+    background-color: white;
+    position: relative;
+    width: 50%;
+} */

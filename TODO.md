@@ -6,7 +6,7 @@
 - create stats for each starter pokemon and the BBEG
 - create the ability for a shiny pokemon to show up. 
 - Hp and Speed stat needed
-- create a main menu with buttons 
+- create a main menu with a button
 
 
 

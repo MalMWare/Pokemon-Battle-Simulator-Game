@@ -22,6 +22,7 @@ window.addEventListener('resize', () => {
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
+    let bulbasaur = new Bulbasaur('bulba')
     bulbasaur.createBulba()
 })
 
