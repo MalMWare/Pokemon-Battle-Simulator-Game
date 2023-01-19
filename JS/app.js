@@ -22,8 +22,17 @@ window.addEventListener('resize', () => {
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
-    let bulbasaur = new Bulbasaur('bulba')
-    bulbasaur.createBulba()
+    const pokemonSelection = document.createElement('div')
+    pokemonSelection.id = "pokeSel"
+    pokemonSelection.style.background = 'white'
+    main.appendChild(pokemonSelection)
+    let charmander = document.createElement('img')
+    charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
+    let squirtle = document.createElement('img')
+    squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
+    let bulbasaur = document.createElement('img')
+    bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
+    pokemonSelection.append(charmander, squirtle, bulbasaur)
 })
 
 

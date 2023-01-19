@@ -4,6 +4,13 @@ body {
     background: url(./assets/images/pokemon-background-mainmenu.webp) center/cover no-repeat;
 }
 
+main {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #startBtn {
     position: fixed;
     background: black;
@@ -23,8 +30,16 @@ body {
     bottom: 350px;
 }
 
-/* #startGame {
+#pokeSel {
     background-color: white;
-    position: relative;
-    width: 50%;
-} */
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: visible;
+}   
+
+#pokeSel img {
+    width: 130px
+}
