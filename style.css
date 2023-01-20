@@ -32,14 +32,25 @@ main {
 
 #pokeSel {
     background-color: white;
-    width: 1200px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+    text-align: center;
     overflow: visible;
 }   
 
 #pokeSel img {
-    width: 130px
+    width: 130px;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-position: -470px ;
+    }
 }

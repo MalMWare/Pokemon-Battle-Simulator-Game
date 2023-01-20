@@ -10,4 +10,5 @@ For this project I will be using the front-end coding languages HTML, CSS, and J
 *None of the images used in this project are owned by me. These are all representations of Pokemon from Nintendo* 
 
 https://wallpapercave.com/pokemon-all-wallpapers  - for the main menu background image 
+https://www.pokecommunity.com/showthread.php?p=8260662  - for the battle background image
 https://pokemondb.net/sprites  - for the pokemon sprites throughout the game

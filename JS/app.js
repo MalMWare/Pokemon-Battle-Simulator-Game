@@ -9,9 +9,17 @@ startBtn.innerText = "Start Game";
 startBtn.id = "startBtn";
 mainMenu.appendChild(startBtn);
 
-startBtn.style.left = window.innerWidth/2 - 122 + "px"
+function setStartBtn () {
+    if (window.innerWidth <= 600) {
+        startBtn.style.left = window.innerWidth/2 - 105 + "px"
+    } else {
+        startBtn.style.left = window.innerWidth/2 - 122 + "px"
+    }
+}
+
+setStartBtn()
 window.addEventListener('resize', () => {
-    startBtn.style.left = window.innerWidth/2 - 122 + "px"
+    setStartBtn()
 })
 
 startBtn.style.bottom = window.innerHeight - 250 + "px"
@@ -25,14 +33,31 @@ startBtn.addEventListener('click', () => {
     const pokemonSelection = document.createElement('div')
     pokemonSelection.id = "pokeSel"
     pokemonSelection.style.background = 'white'
+    let h1 = document.createElement('h1')
+    h1.innerHTML = "Choose Your Pokemon!"
+    let container = document.createElement('div')
+    container.id = "container"
     main.appendChild(pokemonSelection)
     let charmander = document.createElement('img')
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
+    charmander.addEventListener('click', () => {
+        pokemonSelection.remove()
+    })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
+    squirtle.addEventListener('click', () => {
+        pokemonSelection.remove()
+    })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
-    pokemonSelection.append(charmander, squirtle, bulbasaur)
+    bulbasaur.addEventListener('click', () => {
+        pokemonSelection.remove()
+    })
+    container.append(charmander, squirtle, bulbasaur)
+    pokemonSelection.append(h1, container)
+
+    // let bulbasaur = new Bulbasaur('bulba')
+    // bulbasaur.createBulba()
 })
 
 
