@@ -23,6 +23,20 @@ main {
     color:#FFCC00; 
 }
 
+#char {
+    height: 100px;
+    position: absolute;
+    right: 180px;
+    bottom: 350px;
+}
+
+#squirt {
+    height: 100px;
+    position: absolute;
+    right: 180px;
+    bottom: 350px;
+}
+
 #bulba {
     height: 100px;
     position: absolute;

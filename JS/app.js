@@ -42,16 +42,19 @@ startBtn.addEventListener('click', () => {
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
     charmander.addEventListener('click', () => {
         pokemonSelection.remove()
+        randomEnemy()
     })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
         pokemonSelection.remove()
+        randomEnemy()
     })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
         pokemonSelection.remove()
+        randomEnemy()
     })
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
@@ -59,5 +62,4 @@ startBtn.addEventListener('click', () => {
     // let bulbasaur = new Bulbasaur('bulba')
     // bulbasaur.createBulba()
 })
-
 
