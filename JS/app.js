@@ -1,4 +1,6 @@
 const main = document.querySelector('#main')
+//const player = document.querySelector('img')
+//const player = null
 
 const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
@@ -43,23 +45,32 @@ startBtn.addEventListener('click', () => {
     charmander.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
+        let player = document.createElement('img')
+        player.id = "player"
+        player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif" 
+        main.appendChild(player)
     })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
+        let player = document.createElement('img')
+        player.id = "player"
+        player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif" 
+        main.appendChild(player)
     })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
+        let player = document.createElement('img')
+        player.id = "player"
+        player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif" 
+        main.appendChild(player)
     })
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
-
-    // let bulbasaur = new Bulbasaur('bulba')
-    // bulbasaur.createBulba()
 })
 
