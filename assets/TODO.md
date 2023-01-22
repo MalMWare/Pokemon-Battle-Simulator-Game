@@ -7,7 +7,7 @@
 - create the ability for a shiny pokemon to show up. 
 - Hp and Speed stat needed
 - create a main menu with a button
-- add a div for attacks, bag, other pokemon, and run away
+- add a div for battle, bag, other pokemon, and run away
 - add normal attacks
 - when you click run away it goes to the main menu 
 

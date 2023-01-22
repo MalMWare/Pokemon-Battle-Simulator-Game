@@ -1,6 +1,5 @@
 const main = document.querySelector('#main')
-//const player = document.querySelector('img')
-//const player = null
+let player = null
 
 const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
@@ -45,7 +44,7 @@ startBtn.addEventListener('click', () => {
     charmander.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
-        let player = document.createElement('img')
+        player = document.createElement('img')
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif" 
         main.appendChild(player)
@@ -55,7 +54,7 @@ startBtn.addEventListener('click', () => {
     squirtle.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
-        let player = document.createElement('img')
+        player = document.createElement('img')
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif" 
         main.appendChild(player)
@@ -65,7 +64,7 @@ startBtn.addEventListener('click', () => {
     bulbasaur.addEventListener('click', () => {
         pokemonSelection.remove()
         randomEnemy()
-        let player = document.createElement('img')
+        player = document.createElement('img')
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif" 
         main.appendChild(player)
