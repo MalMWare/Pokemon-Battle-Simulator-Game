@@ -1,7 +1,6 @@
 const main = document.querySelector('#main')
 let player = null
 let battleWindow = null
-let container  = null
 
 const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
@@ -30,23 +29,65 @@ window.addEventListener('resize', () => {
     startBtn.style.bottom = window.innerHeight - 250 + "px"
 }) 
 
+function returnButton() {
+    let returnBtn = document.createElement('button')
+    returnBtn.id = 'retBtn'
+    returnBtn.innerHTML = "Return"
+    document.querySelector('#batWind')
+    battleWindow.appendChild(returnBtn)
+    returnBtn.addEventListener('click', () => {
+        battleWindow.innerHTML = null
+        playButtons()
+    })
+}
+
 function playButtons() {
     let batBtn = document.createElement('button')
     batBtn.id = "batBtn"
     batBtn.innerHTML = "Battle"
     battleWindow.appendChild(batBtn)
+    batBtn.addEventListener('click', () => {
+        battleWindow.innerHTML = null
+    })
     let pokemonBtn = document.createElement('button')
     pokemonBtn.id = "pokemon"
     pokemonBtn.innerHTML = "Pokemon"
     battleWindow.appendChild(pokemonBtn)
+    pokemonBtn.addEventListener('click', () => {
+        battleWindow.innerHTML = "You have no other pokemon friends"
+        returnButton()
+    })
     let bagBtn = document.createElement('button')
     bagBtn.id = "bagBtn"
     bagBtn.innerHTML = "Bag"
     battleWindow.appendChild(bagBtn)
+    bagBtn.addEventListener('click', () => {
+        battleWindow.innerHTML = "There is no bag to be found...you must have dropped it"
+        returnButton()
+    })
     let runBtn = document.createElement('button')
     runBtn.id = "batBtn"
     runBtn.innerHTML = "Run Away"
     battleWindow.appendChild(runBtn)
+    runBtn.addEventListener('click', () => {
+        battleWindow.innerHTML = "Are you sure?"
+        let yes = document.createElement('button')
+        yes.id = 'yes'
+        yes.innerHTML = "Yes"
+        battleWindow.appendChild(yes)
+        yes.addEventListener('click', () => {
+            main.innerHTML = null 
+            location.reload()
+        })
+        let no = document.createElement('button')
+        no.id = 'no'
+        no.innerHTML = "No"
+        battleWindow.appendChild(no)
+        no.addEventListener('click', () => {
+            battleWindow.innerHTML = null
+            playButtons()
+        })
+    })
 }
 
 startBtn.addEventListener('click', () => {
@@ -56,7 +97,7 @@ startBtn.addEventListener('click', () => {
     pokemonSelection.id = "pokeSel"
     let h1 = document.createElement('h1')
     h1.innerHTML = "Choose Your Pokemon!"
-    container = document.createElement('div')
+    let container = document.createElement('div')
     container.id = "container"
     main.appendChild(pokemonSelection)
 

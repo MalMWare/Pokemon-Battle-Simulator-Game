@@ -11,6 +11,7 @@ class Charmander {
         char.id = "char"
         main.append(char)
     }
+    attacks
 
 }
 
@@ -27,6 +28,7 @@ class Squirtle {
         squirt.id = "squirt"
         main.append(squirt)
     }
+
 }
 
 class Bulbasaur {
