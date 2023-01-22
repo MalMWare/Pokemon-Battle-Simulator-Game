@@ -75,3 +75,66 @@ main {
     bottom: 10px;
     left: 10px;
 }
+
+#batWind {
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    bottom: 0; 
+    right: 0;
+    position: absolute;
+}
+
+@media screen and (min-width: 600px) {
+    #batWind {
+        width: 300px ;
+    }
+    #squirt, #char, #bulba {
+        right: 120px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #batWind {
+        width: 400px ;
+    }
+    #player {
+        position: absolute;
+        left: 70px;
+    }
+    #squirt, #char, #bulba {
+        right: 180px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #batWind {
+        width: 550px ;
+    }
+    #player {
+        position: absolute;
+        left: 120px;
+    }
+    #squirt, #char, #bulba {
+        right: 230px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #batWind{
+        width: 700px;
+    }
+    #player {
+        position: absolute;
+        left: 250px;
+    }
+    #squirt, #char, #bulba {
+        right: 290px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #squirt, #char, #bulba {
+        right: 365px;
+    }
+}

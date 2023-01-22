@@ -1,5 +1,6 @@
 const main = document.querySelector('#main')
 let player = null
+let battleWindow = null
 
 const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
@@ -33,7 +34,6 @@ startBtn.addEventListener('click', () => {
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
     const pokemonSelection = document.createElement('div')
     pokemonSelection.id = "pokeSel"
-    pokemonSelection.style.background = 'white'
     let h1 = document.createElement('h1')
     h1.innerHTML = "Choose Your Pokemon!"
     let container = document.createElement('div')
@@ -48,6 +48,10 @@ startBtn.addEventListener('click', () => {
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif" 
         main.appendChild(player)
+        battleWindow = document.createElement('div')
+        battleWindow.id = "batWind"
+        battleWindow.style.background = 'white'
+        main.appendChild(battleWindow)
     })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
@@ -58,6 +62,10 @@ startBtn.addEventListener('click', () => {
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif" 
         main.appendChild(player)
+        battleWindow = document.createElement('div')
+        battleWindow.id = "batWind"
+        battleWindow.style.background = 'white'
+        main.appendChild(battleWindow)
     })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
@@ -68,6 +76,10 @@ startBtn.addEventListener('click', () => {
         player.id = "player"
         player.src = "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif" 
         main.appendChild(player)
+        battleWindow = document.createElement('div')
+        battleWindow.id = "batWind"
+        battleWindow.style.background = 'white'
+        main.appendChild(battleWindow)
     })
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
