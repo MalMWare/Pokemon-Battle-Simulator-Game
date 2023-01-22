@@ -48,6 +48,7 @@ function playButtons() {
     battleWindow.appendChild(batBtn)
     batBtn.addEventListener('click', () => {
         battleWindow.innerHTML = null
+        attackBtn()
     })
     let pokemonBtn = document.createElement('button')
     pokemonBtn.id = "pokemon"
@@ -90,6 +91,8 @@ function playButtons() {
     })
 }
 
+
+
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
@@ -104,10 +107,10 @@ startBtn.addEventListener('click', () => {
     function battleMenu(url) {
         pokemonSelection.remove()
         randomEnemy()
-        player = document.createElement('img')
-        player.id = "player"
-        player.src = url 
-        main.appendChild(player)
+        let pokemon = document.createElement('img')
+        pokemon.id = "player"
+        pokemon.src = url 
+        main.appendChild(pokemon)
         battleWindow = document.createElement('div')
         battleWindow.id = "batWind"
         main.appendChild(battleWindow)
@@ -118,21 +121,33 @@ startBtn.addEventListener('click', () => {
     charmander.addEventListener('click', () => {
        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif")
        playButtons()
-
+       player = new Charmander
     })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif")
        playButtons()
+       player = new Squirtle
     })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
         battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif")
         playButtons()
+        player = new Bulbasaur
     })
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
 })
 
+function attackBtn() {
+    console.log(player)
+    player.attacks.forEach(attack => {
+        attack = document.createElement('button')
+        attack.id = 'attackbtn'
+        //attack.innerHTML = attack.name
+        comparePokeType(attack)
+        battleWindow.appendChild(attack)
+    })
+}
