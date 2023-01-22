@@ -144,10 +144,10 @@ startBtn.addEventListener('click', () => {
 function attackBtn() {
     console.log(player)
     player.attacks.forEach(attack => {
-        attack = document.createElement('button')
-        attack.id = 'attackbtn'
-        //attack.innerHTML = attack.name
+        let attackButton = document.createElement('button')
+        attackButton.id = 'attackbtn'
+        attackButton.innerHTML = attack.name
         comparePokeType(attack)
-        battleWindow.appendChild(attack)
+        battleWindow.appendChild(attackButton)
     })
 }
