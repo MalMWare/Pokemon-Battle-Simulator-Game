@@ -15,4 +15,4 @@
 - ability to name your character
 - add an HP bar 
 - add defensive moves
-- add pokemon favicon
+- add pokemon/pokeball favicon

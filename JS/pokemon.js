@@ -57,4 +57,3 @@ function randomEnemy() {
     }
     enemy.createEnemy()
 }
-
