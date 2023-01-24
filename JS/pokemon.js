@@ -1,3 +1,4 @@
+//Classes for pokemon 
 class Charmander {
     constructor(name){
         this.name = name;
@@ -75,6 +76,7 @@ class Bulbasaur {
     }
 }
 
+//global variables
 let enemy = null
 let speedOrder = []
 

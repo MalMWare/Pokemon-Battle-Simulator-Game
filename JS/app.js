@@ -1,3 +1,4 @@
+//global variables
 const main = document.querySelector('#main')
 let player = null
 let battleWindow = null
@@ -67,7 +68,7 @@ function playButtons() {
         returnButton()
     })
     let runBtn = document.createElement('button')
-    runBtn.id = "batBtn"
+    runBtn.id = "runBtn"
     runBtn.innerHTML = "Run Away"
     battleWindow.appendChild(runBtn)
     runBtn.addEventListener('click', () => {
@@ -90,8 +91,6 @@ function playButtons() {
         })
     })
 }
-
-
 
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
