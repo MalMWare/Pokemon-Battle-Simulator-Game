@@ -24,6 +24,15 @@ class Charmander {
         char.id = "char"
         main.append(char)
     }
+
+    attack() {
+        let num = Math.floor(Math.random() * 2) +1
+        if (num = 1) {
+            return this.attacks[0]
+        } else {
+            return this.attacks[1]
+        }
+    }
 }
 
 class Squirtle {
@@ -33,11 +42,13 @@ class Squirtle {
         this.speed = 43;
         this.type = "water"
         this.attacks = [
-            {   name: 'tackle',
+            {   
+                name: 'tackle',
                 damage: 10,
                 type: 'normal'
             },
-            {   name: 'water gun',
+            {   
+                name: 'water gun',
                 damage: 15,
                 type: 'water'
             }
@@ -49,6 +60,14 @@ class Squirtle {
         squirt.id = "squirt"
         main.append(squirt)
     }
+    attack() {
+        let num = Math.floor(Math.random() * 2) +1
+        if (num = 1) {
+            return this.attacks[0]
+        } else {
+            return this.attacks[1]
+        }
+    }
 }
 
 class Bulbasaur {
@@ -58,11 +77,13 @@ class Bulbasaur {
         this.speed = 45;
         this.type = "grass"
         this.attacks = [
-            {   name : 'tackle',
+            {   
+                name : 'tackle',
                 damage: 10,
                 type: 'normal'
             },
-            {   name: 'vine whip',
+            {   
+                name: 'vine whip',
                 damage: 15,
                 type: 'grass'
             }
@@ -74,6 +95,14 @@ class Bulbasaur {
         bulba.id = "bulba"
         main.append(bulba)
     }
+    attack() {
+        let num = Math.floor(Math.random() * 2) +1
+        if (num = 1) {
+            return this.attacks[0]
+        } else {
+            return this.attacks[1]
+        }
+    }
 }
 
 //global variables
@@ -82,7 +111,7 @@ let speedOrder = []
 
 //random enemy generator
 function randomEnemy() {
-    let num = Math.floor(Math.random() * 100)
+    let num = Math.floor(Math.random() * 99) +1
     if (num <= 33) {
         enemy = new Charmander
     } else if (num <= 66) {
@@ -95,10 +124,13 @@ function randomEnemy() {
 
 //speed comparison function
 function compareSpeed() {
+    //enemy = randomEnemy()
     if(player.speed >= enemy.speed) {
+        //enemy = randomEnemy()
         speedOrder.push(player)
         speedOrder.push(enemy)
     } else {
+        //enemy = randomEnemy()
         speedOrder.push(enemy)
         speedOrder.push(player)
     }
@@ -118,6 +150,9 @@ function comparePokeType(attack) {
         return attack.damage * 2
     } else if (attack.type === 'grass' && enemy.type === 'fire') {
         return Math.floor(attack.damage / 2)
+    } else {
+        return attack.damage
     }
 } 
 
+//pokemon battle function

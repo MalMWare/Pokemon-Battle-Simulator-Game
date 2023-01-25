@@ -118,23 +118,26 @@ startBtn.addEventListener('click', () => {
     let charmander = document.createElement('img')
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
     charmander.addEventListener('click', () => {
-       battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif")
-       playButtons()
-       player = new Charmander
+        player = new Charmander
+        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif")
+        playButtons()
+        compareSpeed()
     })
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
+    player = new Squirtle
        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif")
        playButtons()
-       player = new Squirtle
+       compareSpeed()
     })
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
+        player = new Bulbasaur
         battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif")
         playButtons()
-        player = new Bulbasaur
+        compareSpeed()
     })
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
@@ -148,5 +151,34 @@ function attackBtn() {
         attackButton.innerHTML = attack.name
         comparePokeType(attack)
         battleWindow.appendChild(attackButton)
+        attackButton.addEventListener('click', () => {
+
+            attackFunc(attack)
+        })
     })
 }
+
+//let battleFunc = (attack) => {}
+function attackFunc(attack) {
+    for (let pokemon of speedOrder) {
+        if (pokemon.hp > 0) {
+        if (pokemon === player) {
+
+            enemy.hp -= comparePokeType(attack)
+            
+            //attack.damage
+            console.log(enemy.hp)
+        } else {
+            let enemyAttack = pokemon.attack()
+            player.hp -= comparePokeType(enemyAttack)
+            //enemyAttack.damage
+            console.log(player.hp)
+        }}
+    }
+    
+    if (enemy.hp < 0) {
+        console.log("player wins")
+    } else if (player.hp < 0) {
+        console.log('enemy wins')
+    }
+} 
