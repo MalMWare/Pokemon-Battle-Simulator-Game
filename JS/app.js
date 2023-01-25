@@ -115,6 +115,12 @@ startBtn.addEventListener('click', () => {
         main.appendChild(battleWindow)
     }
 
+    function infoText() {
+        let text = document.createElement('div')
+        text.id = 'text'
+        main.appendChild(text)
+    }
+
     let charmander = document.createElement('img')
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
     charmander.addEventListener('click', () => {
@@ -122,7 +128,9 @@ startBtn.addEventListener('click', () => {
         battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif")
         playButtons()
         compareSpeed()
+        infoText()
     })
+
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
@@ -130,7 +138,9 @@ startBtn.addEventListener('click', () => {
        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif")
        playButtons()
        compareSpeed()
+       infoText()
     })
+
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
@@ -138,47 +148,62 @@ startBtn.addEventListener('click', () => {
         battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif")
         playButtons()
         compareSpeed()
+        infoText()
     })
+
     container.append(charmander, squirtle, bulbasaur)
     pokemonSelection.append(h1, container)
 })
 
 function attackBtn() {
-    console.log(player)
     player.attacks.forEach(attack => {
         let attackButton = document.createElement('button')
         attackButton.id = 'attackbtn'
         attackButton.innerHTML = attack.name
-        comparePokeType(attack)
         battleWindow.appendChild(attackButton)
         attackButton.addEventListener('click', () => {
-
             attackFunc(attack)
+            document.querySelector('#batWind').innerHTML = null
+            playButtons()
+
         })
     })
 }
 
-//let battleFunc = (attack) => {}
-function attackFunc(attack) {
+async function attackFunc(attack) {
     for (let pokemon of speedOrder) {
         if (pokemon.hp > 0) {
         if (pokemon === player) {
-
-            enemy.hp -= comparePokeType(attack)
-            
-            //attack.damage
+            let damage = comparePokeType(attack, enemy)
+            enemy.hp -= damage
+            let text = document.querySelector('#text')
+            await new Promise(res => setTimeout(res, 1000)).then(() => {
+                text.innerHTML = `${player.name} attacks ${enemy.name} for ${damage}`
+            })
             console.log(enemy.hp)
         } else {
             let enemyAttack = pokemon.attack()
-            player.hp -= comparePokeType(enemyAttack)
-            //enemyAttack.damage
+            let damage = comparePokeType(enemyAttack, player)
+            player.hp -= damage
+            let text = document.querySelector('#text')
+            await new Promise(res => setTimeout(res, 1000)).then(() => {
+                text.innerHTML = `${enemy.name} attacks ${player.name} for ${damage}`
+            })
             console.log(player.hp)
         }}
     }
     
-    if (enemy.hp < 0) {
+    if (enemy.hp <= 0) {
         console.log("player wins")
-    } else if (player.hp < 0) {
+        let text = document.querySelector('#text')
+            await new Promise(res => setTimeout(res, 1000)).then(() => {
+                text.innerHTML = `You Win!`
+            })
+    } else if (player.hp <= 0) {
+        let text = document.querySelector('#text')
+            await new Promise(res => setTimeout(res, 1000)).then(() => {
+                text.innerHTML = `You Lose!`
+            })
         console.log('enemy wins')
     }
 } 

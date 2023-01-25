@@ -1,7 +1,7 @@
 //Classes for pokemon 
 class Charmander {
-    constructor(name){
-        this.name = name;
+    constructor(){
+        this.name = 'Charmander';
         this.hp = 39;
         this.speed = 65;
         this.type = "fire"
@@ -27,7 +27,7 @@ class Charmander {
 
     attack() {
         let num = Math.floor(Math.random() * 2) +1
-        if (num = 1) {
+        if (num === 1) {
             return this.attacks[0]
         } else {
             return this.attacks[1]
@@ -36,8 +36,8 @@ class Charmander {
 }
 
 class Squirtle {
-    constructor(name){
-        this.name = name;
+    constructor(){
+        this.name = 'Squirtle';
         this.hp = 44;
         this.speed = 43;
         this.type = "water"
@@ -62,7 +62,7 @@ class Squirtle {
     }
     attack() {
         let num = Math.floor(Math.random() * 2) +1
-        if (num = 1) {
+        if (num === 1) {
             return this.attacks[0]
         } else {
             return this.attacks[1]
@@ -71,8 +71,8 @@ class Squirtle {
 }
 
 class Bulbasaur {
-    constructor(name){
-        this.name = name;
+    constructor(){
+        this.name = 'Bulbasaur';
         this.hp = 45;
         this.speed = 45;
         this.type = "grass"
@@ -97,7 +97,7 @@ class Bulbasaur {
     }
     attack() {
         let num = Math.floor(Math.random() * 2) +1
-        if (num = 1) {
+        if (num === 1) {
             return this.attacks[0]
         } else {
             return this.attacks[1]
@@ -137,18 +137,18 @@ function compareSpeed() {
 }
 
 //poketype function
-function comparePokeType(attack) {
-    if(attack.type === 'fire' && enemy.type === 'grass') {
+function comparePokeType(attack, target) {
+    if (attack.type === 'fire' && target.type === 'grass') {
         return attack.damage * 2
-    } else if (attack.type === 'fire' && enemy.type === 'water') {
+    } else if (attack.type === 'fire' && target.type === 'water') {
         return Math.floor(attack.damage / 2)
-    } else if (attack.type === 'water' && enemy.type === 'fire') {
+    } else if (attack.type === 'water' && target.type === 'fire') {
         return attack.damage * 2
-    } else if (attack.type === 'water' && enemy.type === 'grass') {
+    } else if (attack.type === 'water' && target.type === 'grass') {
         return Math.floor(attack.damage / 2)
-    } else if (attack.type === 'grass' && enemy.type === 'water') {
+    } else if (attack.type === 'grass' && target.type === 'water') {
         return attack.damage * 2
-    } else if (attack.type === 'grass' && enemy.type === 'fire') {
+    } else if (attack.type === 'grass' && target.type === 'fire') {
         return Math.floor(attack.damage / 2)
     } else {
         return attack.damage
