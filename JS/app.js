@@ -172,7 +172,7 @@ function attackBtn() {
     })
 }
 
-//attack function for the pokemon's battle moves
+//attack function for the pokemon's battle moves and screen text
 async function attackFunc(attack) {
     for (let pokemon of speedOrder) {
         if (pokemon.hp > 0) {
