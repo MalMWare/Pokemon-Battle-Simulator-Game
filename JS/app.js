@@ -200,17 +200,12 @@ async function attackFunc(attack) {
     if (enemy.hp <= 0) {
         console.log("player wins")
         let text = document.querySelector('#text')
-            await new Promise(res => setTimeout(res, 1000)).then(() => {
-                text.innerHTML = `You Win!`
-                //enemy.img
-            })
+            await new Promise(res => setTimeout(res, 1000)).then(() => {text.innerHTML = `You Win!`})
+            await new Promise(res => setTimeout(res, 1000)).then(() => {location.reload()})
     } else if (player.hp <= 0) {
         let text = document.querySelector('#text')
-            await new Promise(res => setTimeout(res, 1000)).then(() => {
-                text.innerHTML = `You Lose!`
-                location.reload()
-                //remove.player
-            })
+            await new Promise(res => setTimeout(res, 1000)).then(() => {text.innerHTML = `You Lose!`})
+            await new Promise(res => setTimeout(res, 1000)).then(() => {location.reload()})
         console.log('enemy wins')
     }
 } 
