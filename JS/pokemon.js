@@ -7,12 +7,12 @@ class Charmander {
         this.type = "fire"
         this.attacks = [
             {
-                name: 'scratch',
+                name: 'Scratch',
                 damage: 10,
                 type: 'normal'
             },
             {
-                name: 'ember',
+                name: 'Ember',
                 damage: 15,
                 type: 'fire'
             }
@@ -43,12 +43,12 @@ class Squirtle {
         this.type = "water"
         this.attacks = [
             {   
-                name: 'tackle',
+                name: 'Tackle',
                 damage: 10,
                 type: 'normal'
             },
             {   
-                name: 'water gun',
+                name: 'Water Gun',
                 damage: 15,
                 type: 'water'
             }
@@ -78,12 +78,12 @@ class Bulbasaur {
         this.type = "grass"
         this.attacks = [
             {   
-                name : 'tackle',
+                name : 'Tackle',
                 damage: 10,
                 type: 'normal'
             },
             {   
-                name: 'vine whip',
+                name: 'Vine Whip',
                 damage: 15,
                 type: 'grass'
             }
@@ -154,5 +154,3 @@ function comparePokeType(attack, target) {
         return attack.damage
     }
 } 
-
-//pokemon battle function

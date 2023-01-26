@@ -10,6 +10,7 @@
 - add a div for battle, bag, other pokemon, and run away
 - add normal attacks
 - when you click run away it goes to the main menu 
+- add typing for same type pokemon
 
 # Not Necessary but nice additions
 - ability to name your character

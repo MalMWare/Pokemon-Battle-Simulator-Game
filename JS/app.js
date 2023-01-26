@@ -30,6 +30,7 @@ window.addEventListener('resize', () => {
     startBtn.style.bottom = window.innerHeight - 250 + "px"
 }) 
 
+//return button function
 function returnButton() {
     let returnBtn = document.createElement('button')
     returnBtn.id = 'retBtn'
@@ -42,9 +43,10 @@ function returnButton() {
     })
 }
 
+//creating play buttons for after you select your pokemon 
 function playButtons() {
     let batBtn = document.createElement('button')
-    batBtn.id = "batBtn"
+    batBtn.id = "bat-Btn"
     batBtn.innerHTML = "Battle"
     battleWindow.appendChild(batBtn)
     batBtn.addEventListener('click', () => {
@@ -155,6 +157,7 @@ startBtn.addEventListener('click', () => {
     pokemonSelection.append(h1, container)
 })
 
+//creating a function to make the attack buttons
 function attackBtn() {
     player.attacks.forEach(attack => {
         let attackButton = document.createElement('button')
@@ -165,20 +168,21 @@ function attackBtn() {
             attackFunc(attack)
             document.querySelector('#batWind').innerHTML = null
             playButtons()
-
         })
     })
 }
 
+//attack function for the pokemon's battle moves
 async function attackFunc(attack) {
     for (let pokemon of speedOrder) {
         if (pokemon.hp > 0) {
+
         if (pokemon === player) {
             let damage = comparePokeType(attack, enemy)
             enemy.hp -= damage
             let text = document.querySelector('#text')
             await new Promise(res => setTimeout(res, 1000)).then(() => {
-                text.innerHTML = `${player.name} attacks ${enemy.name} for ${damage}`
+                text.innerHTML = `${player.name} attacks ${enemy.name} with ${attack.name} for ${damage}`
             })
             console.log(enemy.hp)
         } else {
@@ -187,7 +191,7 @@ async function attackFunc(attack) {
             player.hp -= damage
             let text = document.querySelector('#text')
             await new Promise(res => setTimeout(res, 1000)).then(() => {
-                text.innerHTML = `${enemy.name} attacks ${player.name} for ${damage}`
+                text.innerHTML = `${enemy.name} attacks ${player.name} with ${attack.name} for ${damage}`
             })
             console.log(player.hp)
         }}
@@ -198,11 +202,14 @@ async function attackFunc(attack) {
         let text = document.querySelector('#text')
             await new Promise(res => setTimeout(res, 1000)).then(() => {
                 text.innerHTML = `You Win!`
+                //enemy.img
             })
     } else if (player.hp <= 0) {
         let text = document.querySelector('#text')
             await new Promise(res => setTimeout(res, 1000)).then(() => {
                 text.innerHTML = `You Lose!`
+                location.reload()
+                //remove.player
             })
         console.log('enemy wins')
     }
