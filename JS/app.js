@@ -191,7 +191,7 @@ async function attackFunc(attack) {
             player.hp -= damage
             let text = document.querySelector('#text')
             await new Promise(res => setTimeout(res, 1000)).then(() => {
-                text.innerHTML = `${enemy.name} attacks ${player.name} with ${attack.name} for ${damage}`
+                text.innerHTML = `${enemy.name} attacks ${player.name} with ${enemyAttack.name} for ${damage}`
             })
             console.log(player.hp)
         }}
