@@ -165,3 +165,11 @@ main {
     left: 0;
     top: 0;
 }
+
+/* @media only screen and (orientation: portrait) {
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+      background-position: rotate(90deg) ;
+    }  
+  } */

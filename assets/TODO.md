@@ -12,8 +12,7 @@
 - when you click run away it goes to the main menu 
 - add typing for same type pokemon
 
-# Not Necessary but nice additions
+# Not Necessary but nice additions -- stretch goals
 - ability to name your character
 - add an HP bar 
 - add defensive moves
-- add pokemon/pokeball favicon

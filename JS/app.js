@@ -127,7 +127,7 @@ startBtn.addEventListener('click', () => {
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
     charmander.addEventListener('click', () => {
         player = new Charmander
-        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif")
+        battleMenu(player.getImage())
         playButtons()
         compareSpeed()
         infoText()
@@ -137,7 +137,7 @@ startBtn.addEventListener('click', () => {
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
     player = new Squirtle
-       battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif")
+       battleMenu(player.getImage())
        playButtons()
        compareSpeed()
        infoText()
@@ -147,7 +147,7 @@ startBtn.addEventListener('click', () => {
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
         player = new Bulbasaur
-        battleMenu("https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif")
+        battleMenu(player.getImage())
         playButtons()
         compareSpeed()
         infoText()

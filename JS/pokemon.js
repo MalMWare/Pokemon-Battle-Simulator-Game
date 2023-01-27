@@ -20,7 +20,7 @@ class Charmander {
     }
     createEnemy() {
         const char = document.createElement("img")
-        char.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif"
+        char.src = this.getEnemyImage()
         char.id = "char"
         main.append(char)
     }
@@ -31,6 +31,24 @@ class Charmander {
             return this.attacks[0]
         } else {
             return this.attacks[1]
+        }
+    }
+
+    getImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif" 
+        }
+    }
+
+    getEnemyImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif" 
         }
     }
 }
@@ -56,7 +74,7 @@ class Squirtle {
     }
     createEnemy() {
         const squirt = document.createElement("img")
-        squirt.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
+        squirt.src = this.getEnemyImage()
         squirt.id = "squirt"
         main.append(squirt)
     }
@@ -66,6 +84,22 @@ class Squirtle {
             return this.attacks[0]
         } else {
             return this.attacks[1]
+        }
+    }
+    getImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/squirtle.gif"  
+        }
+    }
+    getEnemyImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif" 
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/squirtle.gif" 
         }
     }
 }
@@ -91,7 +125,7 @@ class Bulbasaur {
     }
     createEnemy() {
         const bulba = document.createElement("img")
-        bulba.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
+        bulba.src = this.getEnemyImage()
         bulba.id = "bulba"
         main.append(bulba)
     }
@@ -101,6 +135,22 @@ class Bulbasaur {
             return this.attacks[0]
         } else {
             return this.attacks[1]
+        }
+    }
+    getImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif" 
+        }
+    }
+    getEnemyImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" 
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/bulbasaur.gif" 
         }
     }
 }
