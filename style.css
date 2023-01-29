@@ -11,14 +11,14 @@ main {
     justify-content: center;
 }
 
-#startBtn {
+#start-btn {
     position: fixed;
     background: black;
     color: white;
     font-size: 30px;
 }
 
-#startBtn:hover {
+#start-btn:hover {
     background:  #3559B9;
     color:#FFCC00; 
 }
@@ -44,7 +44,7 @@ main {
     bottom: 350px;
 }
 
-#pokeSel {
+#poke-sel {
     background-color: white;
     width: 100%;
     height: 300px;
@@ -52,7 +52,7 @@ main {
     overflow: visible;
 }   
 
-#pokeSel img {
+#poke-sel img {
     width: 130px;
     justify-content: center;
 }
@@ -76,7 +76,7 @@ main {
     left: 10px;
 }
 
-#batWind {
+#bat-wind {
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -89,8 +89,10 @@ main {
     position: absolute;
 }
 
+
+/*media queries for rendering the page screen sized is changed*/
 @media screen and (min-width: 600px) {
-    #batWind {
+    #bat-wind {
         width: 300px ;
     }
     #squirt, #char, #bulba {
@@ -99,7 +101,7 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-    #batWind {
+    #bat-wind {
         width: 400px ;
     }
     #player {
@@ -112,7 +114,7 @@ main {
 }
 
 @media screen and (min-width: 1000px) {
-    #batWind {
+    #bat-wind {
         width: 550px ;
     }
     #player {
@@ -125,7 +127,7 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
-    #batWind{
+    #bat-wind{
         width: 700px;
     }
     #player {
@@ -143,7 +145,7 @@ main {
     }
 }
 
-#bat-Btn, #bagBtn, #pokemon, #runBtn, #attackbtn {
+#bat-btn, #bag-btn, #pokemon, #run-btn, #attack-btn {
     display: block;
     width: 100%;
     height: 100%;

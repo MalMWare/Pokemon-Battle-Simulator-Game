@@ -1,4 +1,4 @@
-//Classes for pokemon 
+//Class for Charmander 
 class Charmander {
     constructor(){
         this.name = 'Charmander';
@@ -18,6 +18,8 @@ class Charmander {
             }
         ]
     }
+
+    //creation of enemy image
     createEnemy() {
         const char = document.createElement("img")
         char.src = this.getEnemyImage()
@@ -25,6 +27,7 @@ class Charmander {
         main.append(char)
     }
 
+    //attack function for which attack will be done by the enemy 
     attack() {
         let num = Math.floor(Math.random() * 2) +1
         if (num === 1) {
@@ -34,6 +37,7 @@ class Charmander {
         }
     }
 
+    //get image for player and possibility of shiny pokemon
     getImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {
@@ -43,6 +47,7 @@ class Charmander {
         }
     }
 
+    //get enemy image and possibility of shiny pokemon
     getEnemyImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {
@@ -53,6 +58,7 @@ class Charmander {
     }
 }
 
+//Class for Squirtle
 class Squirtle {
     constructor(){
         this.name = 'Squirtle';
@@ -72,12 +78,16 @@ class Squirtle {
             }
         ]
     }
+
+    //creation of enemy image
     createEnemy() {
         const squirt = document.createElement("img")
         squirt.src = this.getEnemyImage()
         squirt.id = "squirt"
         main.append(squirt)
     }
+
+    //attack function for which attack will be done by the enemy 
     attack() {
         let num = Math.floor(Math.random() * 2) +1
         if (num === 1) {
@@ -86,6 +96,8 @@ class Squirtle {
             return this.attacks[1]
         }
     }
+
+    //get image for player and possibility of shiny pokemon
     getImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {
@@ -94,6 +106,8 @@ class Squirtle {
             return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/squirtle.gif"  
         }
     }
+
+    //get enemy image and possibility of shiny pokemon
     getEnemyImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {
@@ -104,6 +118,7 @@ class Squirtle {
     }
 }
 
+//Class for bulbasaur
 class Bulbasaur {
     constructor(){
         this.name = 'Bulbasaur';
@@ -123,12 +138,16 @@ class Bulbasaur {
             }
         ]
     }
+
+    //creation of enemy image
     createEnemy() {
         const bulba = document.createElement("img")
         bulba.src = this.getEnemyImage()
         bulba.id = "bulba"
         main.append(bulba)
     }
+
+    //attack function for which attack will be done by the enemy 
     attack() {
         let num = Math.floor(Math.random() * 2) +1
         if (num === 1) {
@@ -137,6 +156,8 @@ class Bulbasaur {
             return this.attacks[1]
         }
     }
+
+    //get image for player and possibility of shiny pokemon
     getImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {
@@ -145,6 +166,8 @@ class Bulbasaur {
             return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif" 
         }
     }
+    
+    //get enemy image and possibility of shiny pokemon
     getEnemyImage() {
         let num = Math.floor(Math.random() * 100) + 1
         if (num <= 99) {

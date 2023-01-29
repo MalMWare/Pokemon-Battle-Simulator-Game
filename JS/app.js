@@ -3,13 +3,15 @@ const main = document.querySelector('#main')
 let player = null
 let battleWindow = null
 
+//creation of main menu
 const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
 main.append(mainMenu);
 
+//creation of start game button and function
 const startBtn = document.createElement("button");
 startBtn.innerText = "Start Game";
-startBtn.id = "startBtn";
+startBtn.id = "start-btn";
 mainMenu.appendChild(startBtn);
 
 function setStartBtn () {
@@ -20,6 +22,7 @@ function setStartBtn () {
     }
 }
 
+//function for the start button to resize to different sized screens 
 setStartBtn()
 window.addEventListener('resize', () => {
     setStartBtn()
@@ -43,16 +46,20 @@ function returnButton() {
     })
 }
 
-//creating play buttons for after you select your pokemon 
+//creating play buttons
 function playButtons() {
+
+    //creation of battle button
     let batBtn = document.createElement('button')
-    batBtn.id = "bat-Btn"
+    batBtn.id = "bat-btn"
     batBtn.innerHTML = "Battle"
     battleWindow.appendChild(batBtn)
     batBtn.addEventListener('click', () => {
         battleWindow.innerHTML = null
         attackBtn()
     })
+
+    //creation of pokemon button
     let pokemonBtn = document.createElement('button')
     pokemonBtn.id = "pokemon"
     pokemonBtn.innerHTML = "Pokemon"
@@ -61,16 +68,20 @@ function playButtons() {
         battleWindow.innerHTML = "You have no other pokemon friends"
         returnButton()
     })
+
+    //creation of bag button
     let bagBtn = document.createElement('button')
-    bagBtn.id = "bagBtn"
+    bagBtn.id = "bag-btn"
     bagBtn.innerHTML = "Bag"
     battleWindow.appendChild(bagBtn)
     bagBtn.addEventListener('click', () => {
         battleWindow.innerHTML = "There is no bag to be found...you must have dropped it"
         returnButton()
     })
+
+    //creation of run away button
     let runBtn = document.createElement('button')
-    runBtn.id = "runBtn"
+    runBtn.id = "run-btn"
     runBtn.innerHTML = "Run Away"
     battleWindow.appendChild(runBtn)
     runBtn.addEventListener('click', () => {
@@ -94,17 +105,21 @@ function playButtons() {
     })
 }
 
+//event listener for after you click the start game button
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
+
+    //creation of pokemon selection div
     const pokemonSelection = document.createElement('div')
-    pokemonSelection.id = "pokeSel"
+    pokemonSelection.id = "poke-sel"
     let h1 = document.createElement('h1')
     h1.innerHTML = "Choose Your Pokemon!"
     let container = document.createElement('div')
     container.id = "container"
     main.appendChild(pokemonSelection)
 
+    //function for the creation of a manu after the pokemon selection div
     function battleMenu(url) {
         pokemonSelection.remove()
         randomEnemy()
@@ -113,16 +128,18 @@ startBtn.addEventListener('click', () => {
         pokemon.src = url 
         main.appendChild(pokemon)
         battleWindow = document.createElement('div')
-        battleWindow.id = "batWind"
+        battleWindow.id = "bat-wind"
         main.appendChild(battleWindow)
     }
 
+    //function for text div
     function infoText() {
         let text = document.createElement('div')
         text.id = 'text'
         main.appendChild(text)
     }
 
+    //creation of player's pokemon choice
     let charmander = document.createElement('img')
     charmander.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
     charmander.addEventListener('click', () => {
@@ -133,6 +150,7 @@ startBtn.addEventListener('click', () => {
         infoText()
     })
 
+    //creation of player's pokemon choice
     let squirtle = document.createElement('img')
     squirtle.src = "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
     squirtle.addEventListener('click', () => {
@@ -143,6 +161,7 @@ startBtn.addEventListener('click', () => {
        infoText()
     })
 
+    //creation of player's pokemon choice
     let bulbasaur = document.createElement('img')
     bulbasaur.src ="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
     bulbasaur.addEventListener('click', () => {
@@ -161,7 +180,7 @@ startBtn.addEventListener('click', () => {
 function attackBtn() {
     player.attacks.forEach(attack => {
         let attackButton = document.createElement('button')
-        attackButton.id = 'attackbtn'
+        attackButton.id = 'attack-btn'
         attackButton.innerHTML = attack.name
         battleWindow.appendChild(attackButton)
         attackButton.addEventListener('click', () => {
@@ -197,6 +216,7 @@ async function attackFunc(attack) {
         }}
     }
     
+    //win and lose function
     if (enemy.hp <= 0) {
         console.log("player wins")
         let text = document.querySelector('#text')

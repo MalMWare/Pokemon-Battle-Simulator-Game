@@ -1,10 +1,10 @@
 # Pokemon-Battle-Simulator-Game
 
-In this project I will be replicating a wild Pokemon battle. 
+In this project I will be creating a game that is replicating a wild Pokemon battle. 
 
-I will be adding the main three types: Fire, Water, and Grass. There will be an options to run away, attack, or defend. 
+I will be adding the main three types: Fire, Water, and Grass. There will be an options to run away or attack. Along with that, the attacks are specific to each pokemon and to which type of pokemon it is. In my code you will see I have added hp, type damage, a speed function, and the ability for shiny pokemon to appear as well. 
 
-For this project I will be using the front-end coding languages HTML, CSS, and Javascript.
+In this project I will be using the front-end coding languages HTML, CSS, and Javascript. 
 
 ## Credits for Images
 *None of the images used in this project are owned by me. These are all representations of Pokemon from Nintendo* 
