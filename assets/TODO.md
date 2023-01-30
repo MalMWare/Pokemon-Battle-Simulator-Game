@@ -17,3 +17,25 @@
 - ability to name your character
 - add an HP bar 
 - add defensive moves
+- add the ability for random button for pokemon
+- add a save mechanic in case the player wants to save
+- add berries or heal potions in the bag
+- adding pokemon status like burned or paralysis
+- adding music and pokemon screams to the game
+- add a how to play/instructions button that shows you how to play the game 
+- possibly change the return button to be a back arrow button that is outside of the div boc for the play buttons 
+- add more attacks
+- add pokemon ability, like intimidation (causing a pokemon to skip it's turn)
+- add weather changes
+- develop their stats
+- add the complete typing chart
+- add all pokemon types
+- add dual typing 
+- add multiple gen pokemon
+- possibly add all pokemon and the ability to choose any of them 
+- possibly add advanced settings that let you choose which pokemon attacks you want
+- add the ability to use the same pokemon
+- possibly add an award for when you defeat a pokemon (like a heal or berry) (make it a choice so that the player can decide what they want)
+- add a quick play button (maybe, it owuld be implimented after i have added all of the pokemon)
+
+
