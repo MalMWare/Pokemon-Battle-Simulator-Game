@@ -8,14 +8,6 @@ const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
 main.append(mainMenu);
 
-let backgroundMusic = document.createElement('audio')
-    backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
-    backgroundMusic.type = "audio/mpeg"
-    backgroundMusic.loop = true
-    backgroundMusic.autoplay = true
-    main.appendChild(backgroundMusic)
-  
-
 //creation of start game button and function
 const startBtn = document.createElement("button");
 startBtn.innerText = "Start Game";
@@ -118,6 +110,15 @@ startBtn.addEventListener('click', () => {
     mainMenu.remove()
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
 
+    //background music added to button listener so that it works on chrome
+    let backgroundMusic = document.createElement('audio')
+    backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
+    backgroundMusic.type = "audio/mpeg"
+    backgroundMusic.loop = true
+    backgroundMusic.autoplay = true
+    backgroundMusic.load()
+    main.appendChild(backgroundMusic)
+ 
     //creation of pokemon selection div
     const pokemonSelection = document.createElement('div')
     pokemonSelection.id = "poke-sel"
