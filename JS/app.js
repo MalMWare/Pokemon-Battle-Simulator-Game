@@ -8,6 +8,14 @@ const mainMenu = document.querySelector("div");
 mainMenu.id = "mainMenu";
 main.append(mainMenu);
 
+let backgroundMusic = document.createElement('audio')
+    backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
+    backgroundMusic.type = "audio/mpeg"
+    backgroundMusic.loop = true
+    backgroundMusic.autoplay = true
+    main.appendChild(backgroundMusic)
+  
+
 //creation of start game button and function
 const startBtn = document.createElement("button");
 startBtn.innerText = "Start Game";
