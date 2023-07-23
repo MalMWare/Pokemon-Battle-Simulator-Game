@@ -15,6 +15,16 @@ class Charmander {
                 name: 'Ember',
                 damage: 15,
                 type: 'fire'
+            },
+            {
+                name: 'Fire Fang',
+                damage: 20,
+                type: 'fire'
+            },
+            {
+                name: 'Smokescreen',
+                damage: 30,
+                type: 'normal'
             }
         ]
     }
@@ -29,11 +39,15 @@ class Charmander {
 
     //attack function for which attack will be done by the enemy 
     attack() {
-        let num = Math.floor(Math.random() * 2) +1
+        let num = Math.floor(Math.random() * 4) +1
         if (num === 1) {
             return this.attacks[0]
-        } else {
+        } else if (num === 2) {
             return this.attacks[1]
+        } else if (num === 3) {
+            return this.attacks[2]
+        } else {
+            return this.attacks[3]
         }
     }
 
@@ -75,6 +89,16 @@ class Squirtle {
                 name: 'Water Gun',
                 damage: 15,
                 type: 'water'
+            },
+            {   
+                name: 'Rapid Spin',
+                damage: 20,
+                type: 'normal'
+            },
+            {   
+                name: 'Water Pulse',
+                damage: 30,
+                type: 'water'
             }
         ]
     }
@@ -89,11 +113,15 @@ class Squirtle {
 
     //attack function for which attack will be done by the enemy 
     attack() {
-        let num = Math.floor(Math.random() * 2) +1
+        let num = Math.floor(Math.random() * 4) +1
         if (num === 1) {
             return this.attacks[0]
-        } else {
+        } else if (num === 2) {
             return this.attacks[1]
+        } else if (num === 3) {
+            return this.attacks[2]
+        } else {
+            return this.attacks[3]
         }
     }
 
@@ -135,6 +163,16 @@ class Bulbasaur {
                 name: 'Vine Whip',
                 damage: 15,
                 type: 'grass'
+            },
+            {
+                name: 'Razor Leaf',
+                damage: 20,
+                type: 'grass'
+            },
+            {
+                name: 'Takedown',
+                damage: 30,
+                type: 'normal'
             }
         ]
     }
@@ -149,11 +187,15 @@ class Bulbasaur {
 
     //attack function for which attack will be done by the enemy 
     attack() {
-        let num = Math.floor(Math.random() * 2) +1
+        let num = Math.floor(Math.random() * 4) +1
         if (num === 1) {
             return this.attacks[0]
-        } else {
+        } else if (num === 2) {
             return this.attacks[1]
+        } else if (num === 3) {
+            return this.attacks[2]
+        } else {
+            return this.attacks[3]
         }
     }
 
@@ -233,3 +275,5 @@ function comparePokeType(attack, target) {
         return attack.damage
     }
 } 
+
+

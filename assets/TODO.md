@@ -22,6 +22,7 @@
 - add berries or heal potions in the bag
 - adding pokemon status like burned or paralysis
 - adding music and pokemon screams to the game
+- add ability to adjust the music and sounds 
 - add a how to play/instructions button that shows you how to play the game 
 - possibly change the return button to be a back arrow button that is outside of the div boc for the play buttons 
 - add more attacks

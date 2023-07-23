@@ -115,7 +115,7 @@ startBtn.addEventListener('click', () => {
     backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
     backgroundMusic.type = "audio/mpeg"
     backgroundMusic.loop = true
-    backgroundMusic.autoplay = true
+    //backgroundMusic.autoplay = true
     backgroundMusic.load()
     main.appendChild(backgroundMusic)
  
