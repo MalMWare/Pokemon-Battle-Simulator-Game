@@ -208,7 +208,6 @@ class Bulbasaur {
             return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif" 
         }
     }
-    
     //get enemy image and possibility of shiny pokemon
     getEnemyImage() {
         let num = Math.floor(Math.random() * 100) + 1
@@ -220,6 +219,69 @@ class Bulbasaur {
     }
 }
 
+//Class for Ratata
+class Ratata  {
+    constructor(){
+        this.name = 'Ratata';
+        this.hp = 30;
+        this.speed = 72;
+        this.type = 'normal'
+        this.attacks = [
+            {
+                name: 'Tackle',
+                damage: 10,
+                type: 'normal'
+            }, 
+            {
+                name: 'Quick Attack',
+                damage: 15,
+                type: 'normal'
+            }
+        ]
+    }
+
+    //creation of enemy image
+    createEnemy() {
+        const rat = document.createElement("img")
+        rat.src = this.getEnemyImage()
+        rat.id = "rat"
+        main.append(rat)
+    }
+
+    //attack function for which attack will be done by the enemy 
+    attack() {
+        let num = Math.floor(Math.random() * 4) +1
+        if (num === 1) {
+            return this.attacks[0]
+        } else if (num === 2) {
+            return this.attacks[1]
+        } else if (num === 3) {
+            return this.attacks[2]
+        } else {
+            return this.attacks[3]
+        }
+    }
+
+    //get image for player and possibility of shiny pokemon
+    getImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata-f.gif"
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/rattata-f.gif" 
+        }
+    }
+    //get enemy image and possibility of shiny pokemon
+    getEnemyImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata-f.gif"
+        } else {
+            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/rattata-f.gif" 
+        }
+    }
+}
+
 //global variables
 let enemy = null
 let speedOrder = []
@@ -227,12 +289,14 @@ let speedOrder = []
 //random enemy generator
 function randomEnemy() {
     let num = Math.floor(Math.random() * 99) +1
-    if (num <= 33) {
+    if (num <= 25) {
         enemy = new Charmander
-    } else if (num <= 66) {
+    } else if (num <= 50) {
         enemy = new Squirtle
-    } else {
+    } else if (num <= 75) {
         enemy = new Bulbasaur
+    } else {
+        enemy = new Ratata
     }
     enemy.createEnemy()
 }
