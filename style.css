@@ -44,6 +44,13 @@ main {
     bottom: 350px;
 }
 
+#rat {
+    height: 100px;
+    position: absolute;
+    right: 80px;
+    bottom: 350px;
+}
+
 #poke-sel {
     background-color: white;
     width: 100%;
@@ -95,7 +102,7 @@ main {
     #bat-wind {
         width: 300px ;
     }
-    #squirt, #char, #bulba {
+    #squirt, #char, #bulba, #rat {
         right: 120px;
     }
 }
@@ -108,7 +115,7 @@ main {
         position: absolute;
         left: 70px;
     }
-    #squirt, #char, #bulba {
+    #squirt, #char, #bulba, #rat {
         right: 180px;
     }
 }
@@ -121,7 +128,7 @@ main {
         position: absolute;
         left: 120px;
     }
-    #squirt, #char, #bulba {
+    #squirt, #char, #bulba, #rat {
         right: 230px;
     }
 }
@@ -134,13 +141,13 @@ main {
         position: absolute;
         left: 250px;
     }
-    #squirt, #char, #bulba {
+    #squirt, #char, #bulba, #rat {
         right: 290px;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    #squirt, #char, #bulba {
+    #squirt, #char, #bulba, #rat {
         right: 365px;
     }
 }

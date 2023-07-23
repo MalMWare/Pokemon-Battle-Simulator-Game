@@ -236,6 +236,16 @@ class Ratata  {
                 name: 'Quick Attack',
                 damage: 15,
                 type: 'normal'
+            },
+            {
+                name: 'Fury Flame',
+                damage: 20,
+                type: 'normal'
+            },
+            {
+                name: 'Last Resort',
+                damage: 30,
+                type: 'normal'
             }
         ]
     }
