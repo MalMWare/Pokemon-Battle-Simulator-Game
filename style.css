@@ -23,6 +23,11 @@ main {
     color:#FFCC00; 
 }
 
+#muteButton {
+    position: absolute;
+    inset: 0 0 auto auto
+}
+
 #char {
     height: 100px;
     position: absolute;

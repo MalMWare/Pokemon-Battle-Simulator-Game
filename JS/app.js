@@ -22,6 +22,29 @@ function setStartBtn () {
     }
 }
 
+// let muteButton = document.createElement('button')
+// muteButton.id = "muteButton"
+// muteButton.innerText = "Mute"
+// let backgroundMusic = document.createElement('audio')
+// backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
+// backgroundMusic.id = "audio"
+// muteButton.addEventListener('click', () => {
+//     function mButton() {
+//         let x = document.getElementsById("audio");
+//         if (x.innerHTML === "Mute") {
+//           x.innerHTML = "Unmute";
+//           // Function to mute
+//         } else {
+//           x.innerHTML = "Mute";
+//        // Function to unmute
+//         }
+//     }
+// })
+
+// main.append(muteButton)
+// mainMenu.appendChild(muteButton)
+
+
 //function for the start button to resize to different sized screens 
 setStartBtn()
 window.addEventListener('resize', () => {
@@ -111,13 +134,13 @@ startBtn.addEventListener('click', () => {
     document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
 
     //background music added to button listener so that it works on chrome
-    let backgroundMusic = document.createElement('audio')
-    backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
-    backgroundMusic.type = "audio/mpeg"
-    backgroundMusic.loop = true
-    //backgroundMusic.autoplay = true
-    backgroundMusic.load()
-    main.appendChild(backgroundMusic)
+    // let backgroundMusic = document.createElement('audio')
+    // backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
+    // backgroundMusic.type = "audio/mpeg"
+    // backgroundMusic.loop = true
+    // //backgroundMusic.autoplay = true
+    // backgroundMusic.load()
+    // main.appendChild(backgroundMusic)
  
     //creation of pokemon selection div
     const pokemonSelection = document.createElement('div')
@@ -128,7 +151,7 @@ startBtn.addEventListener('click', () => {
     container.id = "container"
     main.appendChild(pokemonSelection)
 
-    //function for the creation of a manu after the pokemon selection div
+    //function for the creation of a menu after the pokemon selection div
     function battleMenu(url) {
         pokemonSelection.remove()
         randomEnemy()
