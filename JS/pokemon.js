@@ -169,12 +169,18 @@ class Bulbasaur extends Pokemon {
 }
 
 //Class for Ratata
-class Ratata  {
+class Ratata extends Pokemon {
     constructor(){
-        this.name = 'Ratata';
-        this.hp = 30;
-        this.speed = 72;
-        this.type = 'normal'
+        super(
+        "Ratata",
+        30,
+        72,
+        "normal",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata-f.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/rattata-f.gif",
+        null,
+        null
+        )
         this.attacks = [
             {
                 name: 'Tackle',
@@ -197,38 +203,6 @@ class Ratata  {
                 type: 'normal'
             }
         ]
-    }
-
-    //creation of enemy image
-    createEnemy() {
-        const rat = document.createElement("img")
-        rat.src = this.getEnemyImage()
-        rat.id = "rat"
-        main.append(rat)
-    }
-
-    //attack function for which attack will be done by the enemy 
-    attack() {
-        let num = Math.floor(Math.random() * 4) +1
-        if (num === 1) {
-            return this.attacks[0]
-        } else if (num === 2) {
-            return this.attacks[1]
-        } else if (num === 3) {
-            return this.attacks[2]
-        } else {
-            return this.attacks[3]
-        }
-    }
-
-    //get enemy image and possibility of shiny pokemon
-    getEnemyImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata-f.gif"
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/rattata-f.gif" 
-        }
     }
 }
 
