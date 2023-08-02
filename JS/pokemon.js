@@ -1,10 +1,70 @@
+//class for pokemon
+class Pokemon {
+    constructor(name, hp, speed, type, enemyImage, shinyEnemyImage, playerImage, shinyPlayerImage){
+        this.name = name;
+        this.hp = hp;
+        this.speed = speed;
+        this.type = type;
+        this.enemyImage = enemyImage;
+        this.shinyEnemyImage = shinyEnemyImage;
+        this.playerImage = playerImage;
+        this.shinyPlayerImage = shinyPlayerImage;
+    }
+
+    //creation of enemy 
+    createEnemy() {
+        const pokemon = document.createElement("img")
+        pokemon.src = this.getEnemyImage()
+        pokemon.id = "enemy"
+        main.append(pokemon)
+    }
+
+    //attack function for which attack will be done by the enemy 
+    attack() {
+        let num = Math.floor(Math.random() * 4) +1
+        if (num === 1) {
+            return this.attacks[0]
+        } else if (num === 2) {
+            return this.attacks[1]
+        } else if (num === 3) {
+            return this.attacks[2]
+        } else {
+            return this.attacks[3]
+        }
+    }
+
+    //get player image and possibility for shiny pokemon
+    getImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return this.playerImage
+        } else {
+            return this.shinyPlayerImage 
+        }
+    }
+
+    //get enemy image and possibility of shiny pokemon
+    getEnemyImage() {
+        let num = Math.floor(Math.random() * 100) + 1
+        if (num <= 99) {
+            return this.enemyImage 
+        } else {
+            return this.shinyEnemyImage
+        }
+    }
+}
+
 //Class for Charmander 
-class Charmander {
+class Charmander extends Pokemon {
     constructor(){
-        this.name = 'Charmander';
-        this.hp = 39;
-        this.speed = 65;
-        this.type = "fire"
+        super('Charmander', 
+        39, 
+        65, 
+        "fire", 
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif" )
         this.attacks = [
             {
                 name: 'Scratch',
@@ -27,48 +87,6 @@ class Charmander {
                 type: 'normal'
             }
         ]
-    }
-
-    //creation of enemy image
-    createEnemy() {
-        const char = document.createElement("img")
-        char.src = this.getEnemyImage()
-        char.id = "char"
-        main.append(char)
-    }
-
-    //attack function for which attack will be done by the enemy 
-    attack() {
-        let num = Math.floor(Math.random() * 4) +1
-        if (num === 1) {
-            return this.attacks[0]
-        } else if (num === 2) {
-            return this.attacks[1]
-        } else if (num === 3) {
-            return this.attacks[2]
-        } else {
-            return this.attacks[3]
-        }
-    }
-
-    //get image for player and possibility of shiny pokemon
-    getImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif" 
-        }
-    }
-
-    //get enemy image and possibility of shiny pokemon
-    getEnemyImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" 
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif" 
-        }
     }
 }
 
@@ -272,15 +290,6 @@ class Ratata  {
         }
     }
 
-    //get image for player and possibility of shiny pokemon
-    getImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata-f.gif"
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/rattata-f.gif" 
-        }
-    }
     //get enemy image and possibility of shiny pokemon
     getEnemyImage() {
         let num = Math.floor(Math.random() * 100) + 1
