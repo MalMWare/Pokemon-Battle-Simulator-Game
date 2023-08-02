@@ -131,12 +131,18 @@ class Squirtle extends Pokemon {
 }
 
 //Class for bulbasaur
-class Bulbasaur {
+class Bulbasaur extends Pokemon {
     constructor(){
-        this.name = 'Bulbasaur';
-        this.hp = 45;
-        this.speed = 45;
-        this.type = "grass"
+        super(
+        "Bulbasaur",
+        45,
+        45,
+        "grass",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/bulbasaur.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif"
+        )
         this.attacks = [
             {   
                 name : 'Tackle',
@@ -159,47 +165,6 @@ class Bulbasaur {
                 type: 'normal'
             }
         ]
-    }
-
-    //creation of enemy image
-    createEnemy() {
-        const bulba = document.createElement("img")
-        bulba.src = this.getEnemyImage()
-        bulba.id = "bulba"
-        main.append(bulba)
-    }
-
-    //attack function for which attack will be done by the enemy 
-    attack() {
-        let num = Math.floor(Math.random() * 4) +1
-        if (num === 1) {
-            return this.attacks[0]
-        } else if (num === 2) {
-            return this.attacks[1]
-        } else if (num === 3) {
-            return this.attacks[2]
-        } else {
-            return this.attacks[3]
-        }
-    }
-
-    //get image for player and possibility of shiny pokemon
-    getImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif" 
-        }
-    }
-    //get enemy image and possibility of shiny pokemon
-    getEnemyImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" 
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/bulbasaur.gif" 
-        }
     }
 }
 
