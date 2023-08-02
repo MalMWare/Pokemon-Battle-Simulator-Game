@@ -28,28 +28,7 @@ main {
     inset: 0 0 auto auto
 }
 
-#char {
-    height: 100px;
-    position: absolute;
-    right: 80px;
-    bottom: 350px;
-}
-
-#squirt {
-    height: 100px;
-    position: absolute;
-    right: 80px;
-    bottom: 350px;
-}
-
-#bulba {
-    height: 100px;
-    position: absolute;
-    right: 80px;
-    bottom: 350px;
-}
-
-#rat {
+#enemy {
     height: 100px;
     position: absolute;
     right: 80px;
@@ -101,71 +80,6 @@ main {
     position: absolute;
 }
 
-
-/*media queries for rendering the page screen sized is changed*/
-@media screen and (min-width: 600px) {
-    #bat-wind {
-        width: 300px ;
-    }
-    #squirt, #char, #bulba, #rat {
-        right: 120px;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    #bat-wind {
-        width: 400px ;
-    }
-    #player {
-        position: absolute;
-        left: 70px;
-    }
-    #squirt, #char, #bulba, #rat {
-        right: 180px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    #bat-wind {
-        width: 550px ;
-    }
-    #player {
-        position: absolute;
-        left: 120px;
-    }
-    #squirt, #char, #bulba, #rat {
-        right: 230px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    #bat-wind{
-        width: 700px;
-    }
-    #player {
-        position: absolute;
-        left: 250px;
-    }
-    #squirt, #char, #bulba, #rat {
-        right: 290px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    #squirt, #char, #bulba, #rat {
-        right: 365px;
-    }
-}
-
-#bat-btn, #bag-btn, #pokemon, #run-btn, #attack-btn {
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: x-large;
-    /*background:  #3559B9;
-    color:#FFCC00; */
-}
-
 #text {
     background-color: white;
     width: 100%;
@@ -178,6 +92,85 @@ main {
     position: fixed;
     left: 0;
     top: 0;
+}
+
+/*media queries for rendering the page screen sized is changed*/
+@media screen and (max-width: 400px){
+    #text {
+        height: 75px;
+    }
+    #bat-wind {
+        width: 170px;
+    }
+    #player {
+        left: 1px;
+    }
+    #enemy {
+        right: 35px;
+        top: 430px;
+    }
+}
+@media screen and (min-width: 600px) {
+    #bat-wind {
+        width: 300px ;
+    }
+    #enemy {
+        right: 120px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #bat-wind {
+        width: 400px ;
+    }
+    #player {
+        position: absolute;
+        left: 70px;
+    }
+    #enemy {
+        right: 180px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #bat-wind {
+        width: 550px ;
+    }
+    #player {
+        position: absolute;
+        left: 120px;
+    }
+    #enemy {
+        right: 230px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #bat-wind{
+        width: 700px;
+    }
+    #player {
+        position: absolute;
+        left: 250px;
+    }
+    #enemy {
+        right: 290px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #enemy {
+        right: 365px;
+    }
+}
+
+#bat-btn, #bag-btn, #pokemon, #run-btn, #attack-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: x-large;
+    /*background:  #3559B9;
+    color:#FFCC00; */
 }
 
 /* @media only screen and (orientation: portrait) {
