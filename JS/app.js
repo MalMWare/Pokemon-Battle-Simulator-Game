@@ -40,8 +40,6 @@ function setStartBtn () {
 //         }
 //     }
 // })
-
-// main.append(muteButton)
 // mainMenu.appendChild(muteButton)
 
 
