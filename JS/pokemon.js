@@ -57,14 +57,16 @@ class Pokemon {
 //Class for Charmander 
 class Charmander extends Pokemon {
     constructor(){
-        super('Charmander', 
+        super(
+        'Charmander', 
         39, 
         65, 
         "fire", 
         "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif", 
         "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif", 
         "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif", 
-        "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif" )
+        "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif" 
+        )
         this.attacks = [
             {
                 name: 'Scratch',
@@ -91,12 +93,18 @@ class Charmander extends Pokemon {
 }
 
 //Class for Squirtle
-class Squirtle {
+class Squirtle extends Pokemon {
     constructor(){
-        this.name = 'Squirtle';
-        this.hp = 44;
-        this.speed = 43;
-        this.type = "water"
+        super(
+        'Squirtle', 
+        44, 
+        43, 
+        "water", 
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/squirtle.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif", 
+        "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/squirtle.gif"
+        )
         this.attacks = [
             {   
                 name: 'Tackle',
@@ -119,48 +127,6 @@ class Squirtle {
                 type: 'water'
             }
         ]
-    }
-
-    //creation of enemy image
-    createEnemy() {
-        const squirt = document.createElement("img")
-        squirt.src = this.getEnemyImage()
-        squirt.id = "squirt"
-        main.append(squirt)
-    }
-
-    //attack function for which attack will be done by the enemy 
-    attack() {
-        let num = Math.floor(Math.random() * 4) +1
-        if (num === 1) {
-            return this.attacks[0]
-        } else if (num === 2) {
-            return this.attacks[1]
-        } else if (num === 3) {
-            return this.attacks[2]
-        } else {
-            return this.attacks[3]
-        }
-    }
-
-    //get image for player and possibility of shiny pokemon
-    getImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/squirtle.gif"  
-        }
-    }
-
-    //get enemy image and possibility of shiny pokemon
-    getEnemyImage() {
-        let num = Math.floor(Math.random() * 100) + 1
-        if (num <= 99) {
-            return "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif" 
-        } else {
-            return "https://img.pokemondb.net/sprites/black-white/anim/shiny/squirtle.gif" 
-        }
     }
 }
 
