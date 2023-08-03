@@ -97,9 +97,6 @@ main {
 
 /*media queries for rendering the page screen sized is changed*/
 @media screen and (max-width: 440px){
-    #body {
-        background-position: right top;
-    }
     #text {
         height: 75px;
     }

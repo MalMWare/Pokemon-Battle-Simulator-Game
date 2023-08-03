@@ -206,6 +206,44 @@ class Ratata extends Pokemon {
     }
 }
 
+
+//Class for Meowth
+class Meowth extends Pokemon {
+    constructor() {
+        super(
+        "Meowth",
+        40,
+        90,
+        "normal",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/meowth.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/meowth.gif",
+        null,
+        null,
+        )
+        this.attacks = [
+            {
+                name: 'Fake Out',
+                damage: 10,
+                type: 'normal',
+            },
+            {
+                name: 'Scratch',
+                damage: 15,
+                type: 'normal'
+            },
+            {
+                name: 'Pay Day',
+                damage: 20,
+                type: 'normal',
+            },
+            {
+                name: 'Slash',
+                damage: 30,
+                type: 'normal'
+            }
+        ]
+    }
+}
 //global variables
 let enemy = null
 let speedOrder = []
@@ -213,14 +251,16 @@ let speedOrder = []
 //random enemy generator
 function randomEnemy() {
     let num = Math.floor(Math.random() * 99) +1
-    if (num <= 25) {
+    if (num <= 20) {
         enemy = new Charmander
-    } else if (num <= 50) {
+    } else if (num <= 40) {
         enemy = new Squirtle
-    } else if (num <= 75) {
+    } else if (num <= 60) {
         enemy = new Bulbasaur
-    } else {
+    } else if (num <= 80) {
         enemy = new Ratata
+    } else {
+        enemy = new Meowth
     }
     enemy.createEnemy()
 }
