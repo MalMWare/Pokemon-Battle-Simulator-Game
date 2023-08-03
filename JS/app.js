@@ -129,7 +129,7 @@ function playButtons() {
 //event listener for after you click the start game button
 startBtn.addEventListener('click', () => {
     mainMenu.remove()
-    document.body.style.background = 'url(./assets/images/pokemon-battle-background-image.png) center/100% 100% no-repeat'
+    document.body.style.background = 'url(./assets/images/Pokemon-background-battle-image-2.png) center/100% 100% no-repeat'
 
     //background music added to button listener so that it works on chrome
     // let backgroundMusic = document.createElement('audio')
