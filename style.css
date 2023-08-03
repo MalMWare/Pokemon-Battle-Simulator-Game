@@ -56,7 +56,8 @@ main {
 
 @media screen and (max-width: 600px) {
     body {
-        background-position: right ;
+        background-position: right;
+        background-size: 1700px;
     }
 }
 
