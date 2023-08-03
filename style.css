@@ -96,7 +96,7 @@ main {
 }
 
 /*media queries for rendering the page screen sized is changed*/
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
     #body {
         background-position: right top;
     }
@@ -111,7 +111,7 @@ main {
     }
     #enemy {
         right: 35px;
-        top: 430px;
+        top: 265px;
     }
 }
 @media screen and (min-width: 600px) {
