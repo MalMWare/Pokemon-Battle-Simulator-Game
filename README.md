@@ -11,4 +11,6 @@ In this project I will be using the front-end coding languages HTML, CSS, and Ja
 
 https://wallpapercave.com/pokemon-all-wallpapers  - for the main menu background image 
 https://www.pokecommunity.com/showthread.php?p=8260662  - for the battle background image
+https://www.deviantart.com/phoenixoflight92/art/ - for the battle background image
+Pokemon-X-and-Y-battle-background-11-490619697
 https://pokemondb.net/sprites  - for the pokemon sprites throughout the game

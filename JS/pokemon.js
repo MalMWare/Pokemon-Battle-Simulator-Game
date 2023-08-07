@@ -244,6 +244,47 @@ class Meowth extends Pokemon {
         ]
     }
 }
+
+//class for Caterpie
+class Butterfree extends Pokemon {
+    constructor() {
+        super(
+        "Butterfree",
+        60,
+        70,
+        "bug",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree-f.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/shiny/butterfree-f.gif",
+        null,
+        null
+        )
+        this.attacks = [
+            {
+                name: 'Bug Bite',
+                damage: 10,
+                type: 'bug',
+            },
+            {
+                name: 'Gust',
+                damage: 15,
+                type: 'flying'
+            },
+            {
+                name: 'Air Slash',
+                damage: 20,
+                type: 'flying',
+            },
+            {
+                name: 'Bug Buzz',
+                damage: 30,
+                type: 'bug'
+            }
+        ]
+    }
+
+}
+
+
 //global variables
 let enemy = null
 let speedOrder = []
