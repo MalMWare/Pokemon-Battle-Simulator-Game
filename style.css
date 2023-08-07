@@ -95,6 +95,11 @@ main {
     top: 0;
 }
 
+#audio {
+    width: 25%;
+    float: right;
+}
+
 /*media queries for rendering the page screen sized is changed*/
 @media screen and (max-width: 440px){
     #text {
@@ -110,6 +115,10 @@ main {
         right: 35px;
         top: 265px;
     }
+    #audio {
+        width: 24%;
+        left: 30px;
+    }
 }
 @media screen and (min-width: 600px) {
     #bat-wind {
@@ -117,6 +126,9 @@ main {
     }
     #enemy {
         right: 120px;
+    }
+    #audio {
+        width: 11%;
     }
 }
 
@@ -173,6 +185,8 @@ main {
     /*background:  #3559B9;
     color:#FFCC00; */
 }
+
+
 
 /* @media only screen and (orientation: portrait) {
     body {

@@ -22,9 +22,9 @@ function setStartBtn () {
     }
 }
 
-// let muteButton = document.createElement('button')
-// muteButton.id = "muteButton"
-// muteButton.innerText = "Mute"
+// let audioButton = document.createElement('button')
+// audioButton.id = "audioButton"
+// audioButton.innerText = "Mute"
 // let backgroundMusic = document.createElement('audio')
 // backgroundMusic.src = "./assets/Audio/Eterna-Forest.mp3"
 // backgroundMusic.id = "audio"
