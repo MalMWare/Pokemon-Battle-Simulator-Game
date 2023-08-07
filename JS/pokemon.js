@@ -292,16 +292,18 @@ let speedOrder = []
 //random enemy generator
 function randomEnemy() {
     let num = Math.floor(Math.random() * 99) +1
-    if (num <= 20) {
+    if (num <= 16) {
         enemy = new Charmander
-    } else if (num <= 40) {
+    } else if (num <= 32) {
         enemy = new Squirtle
-    } else if (num <= 60) {
+    } else if (num <= 48) {
         enemy = new Bulbasaur
-    } else if (num <= 80) {
+    } else if (num <= 64) {
         enemy = new Ratata
-    } else {
+    } else if (num <= 80){
         enemy = new Meowth
+    } else {
+        enemy = new Butterfree
     }
     enemy.createEnemy()
 }
