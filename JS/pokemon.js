@@ -340,6 +340,14 @@ function comparePokeType(attack, target) {
         return Math.floor(attack.damage / 2)
     }  else if (attack.type === 'grass' && target.type === 'grass') {
         return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'bug' && target.type === 'grass') {
+        return attack.damage * 2
+    } else if (attack.type === 'grass' && target.type === 'bug') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'bug' && target.type === 'fire') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'fire' &&  target.type === 'bug') {
+        return attack.damage * 2
     } else {
         return attack.damage
     }
