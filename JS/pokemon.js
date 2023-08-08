@@ -389,10 +389,23 @@ function comparePokeType(attack, target) {
     } else if (attack.type === 'fire' &&  target.type === 'bug') {
         return attack.damage * 2
     } else if (attack.type === 'flying' && target.type === 'grass') {
-        return attack.damage *2
+        return attack.damage * 2
     } else if (attack.type === 'grass' && target.type === 'flying') {
         return Math.floor(attack.damage / 2)
-    } else {
+    } else if (attack.type === 'water' && target.type === 'electric') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'flying' && target.type === 'electric') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'electric' && target.type === 'electric') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'electric' && target.type === 'grass') {
+        return Math.floor(attack.damage / 2)
+    } else if (attack.type === 'electric' && target.type === 'water') {
+        return attack.damage * 2
+    } else if (attack.type === 'electric' && target.type === 'flying') {
+        return attack.damage * 2
+    }
+    else {
         return attack.damage
     }
 } 
