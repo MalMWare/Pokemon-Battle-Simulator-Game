@@ -245,7 +245,7 @@ class Meowth extends Pokemon {
     }
 }
 
-//class for Caterpie
+//class for Butterfree
 class Butterfree extends Pokemon {
     constructor() {
         super(
@@ -282,6 +282,44 @@ class Butterfree extends Pokemon {
         ]
     }
 
+}
+
+//class for Pikachu
+class Pikachu extends Pokemon {
+    constructor () {
+        super(
+        "Pikachu",
+        35,
+        90,
+        "electric",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu-f.gif",
+        "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu-f.gif",
+        null,
+        null
+        )
+        this.attacks = [
+            {
+                name: 'Nuzzle',
+                damage: 10,
+                type: 'electric',
+            },
+            {
+                name: 'Quick Attack',
+                damage: 15,
+                type: 'normal',
+            },
+            {
+                name: 'Thunder Shock',
+                damage: 20,
+                type: 'electric',
+            },
+            {
+                name: 'Feint',
+                damage: 30,
+                type: 'normal',
+            }
+        ]
+    }
 }
 
 
